@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Miranda Dawe, Realtor: your Christmas greeting is ready</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Mountains+of+Christmas:wght@700&display=swap" rel="stylesheet">
+<style>
+:root {
+  color-scheme: light;
+  --red: #c8102e; --red-deep: #9e0c24; --pine: #17402a; --green: #4f8a2b;
+  --snow: #ffffff; --frost: #eef3ef; --ink: #17402a; --muted: #4d6657; --line: #cfdcd3; --mint: #bcd7c4;
+  --body: "Bricolage Grotesque", "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --script: "Mountains of Christmas", "Brush Script MT", cursive;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+*, *::before, *::after { box-sizing: inherit; }
+html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body { margin: 0; background: var(--snow); color: var(--ink); font-family: var(--body); font-size: 17px; line-height: 1.55; }
+img { max-width: 100%; }
+a { color: var(--red-deep); }
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; }
+.stripe { height: 18px; background: repeating-linear-gradient(-45deg, var(--red) 0 16px, var(--snow) 16px 32px); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: 22px; padding-right: 22px; }
+
+.stations { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 26px; padding-top: 16px; padding-bottom: 4px; }
+.stations img { height: 38px; width: auto; }
+.stations:empty { display: none; }
+
+/* Hero */
+.hero { padding-top: 30px; padding-bottom: 52px; }
+.eyebrow { font-size: 14px; font-weight: 600; color: var(--muted); margin: 0 0 18px; max-width: 60ch; }
+.hello { font-size: 18px; color: var(--muted); margin: 0 0 6px; }
+h1 { font-size: clamp(34px, 6vw, 58px); line-height: 1.03; font-weight: 800; letter-spacing: -0.02em; margin: 0 0 12px; max-width: 17ch; }
+.subhead { font-size: clamp(21px, 2.8vw, 27px); line-height: 1.2; font-weight: 600; color: var(--red-deep); margin: 0 0 16px; max-width: 30ch; }
+.lede { max-width: 54ch; margin: 0 0 22px; font-size: 19px; }
+.hero-cta { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; margin: 0 0 34px; }
+.btn { display: inline-block; text-decoration: none; background: var(--red); color: var(--snow); font-weight: 800; font-size: 17px; padding: 14px 24px; border-radius: 12px; border: none; cursor: pointer; text-align: center; }
+.btn:hover { background: var(--red-deep); }
+.or-call { font-size: 16px; color: var(--muted); }
+.or-call a { font-weight: 600; }
+
+.spec { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+@media (max-width: 860px) { .spec { grid-template-columns: 1fr; } }
+
+.onair { background: var(--pine); color: var(--snow); border-radius: 22px; padding: 26px 26px 30px; position: relative; overflow: hidden; }
+.onair::after { content: ""; position: absolute; inset: auto 0 0 0; height: 8px; background: repeating-linear-gradient(-45deg, var(--red) 0 10px, var(--snow) 10px 20px); }
+.onair h2 { font-size: 15px; font-weight: 600; margin: 0 0 18px; color: var(--mint); }
+.player { display: flex; align-items: center; gap: 18px; }
+.play { flex: none; width: 76px; height: 76px; border-radius: 50%; border: none; background: var(--red); color: var(--snow); cursor: pointer; display: grid; place-items: center; box-shadow: 0 0 0 6px rgba(200,16,46,.25); transition: transform .15s ease; }
+.play:hover { transform: scale(1.05); }
+.play svg { width: 30px; height: 30px; }
+.track { flex: 1; min-width: 0; }
+.track-name { font-weight: 800; font-size: 20px; line-height: 1.2; margin: 0 0 10px; }
+.bar { height: 8px; background: rgba(255,255,255,.18); border-radius: 4px; cursor: pointer; }
+.bar i { display: block; height: 100%; width: 0; background: var(--snow); border-radius: 4px; }
+.time { font-size: 13px; color: var(--mint); margin-top: 6px; font-variant-numeric: tabular-nums; }
+.reach { margin: 18px 0 0; font-size: 15px; color: var(--mint); }
+.reach strong { color: var(--snow); font-size: 17px; }
+.script { margin: 18px 0 0; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.18); font-size: 17px; line-height: 1.6; }
+.script-note { font-size: 13px; color: var(--mint); margin: 0 0 6px; }
+.no-audio { display: none; font-size: 15px; color: var(--mint); margin: 0; }
+.onair.missing .player { display: none; }
+.onair.missing .no-audio { display: block; }
+
+.digital-col { display: flex; flex-direction: column; align-items: center; }
+.ad { width: 300px; height: 250px; flex: none; padding: 12px; background-image: repeating-linear-gradient(-45deg, var(--red) 0 9px, var(--snow) 9px 18px); box-shadow: 0 14px 30px -12px rgba(23,64,42,.45); }
+.ad-inner { width: 100%; height: 100%; background: var(--snow); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 14px; text-align: center; position: relative; border: 3px solid var(--green); }
+.ad-head { font-family: var(--script); font-size: 27px; line-height: 1.05; color: var(--pine); margin: 0 0 10px; }
+.ad-logo { display: block; width: 220px; height: 115px; object-fit: contain; }
+.ad-name { font-weight: 800; font-size: 22px; line-height: 1.15; color: var(--pine); }
+.holly { position: absolute; width: 40px; height: 40px; }
+.holly.tl { top: -6px; left: -6px; }
+.holly.br { bottom: -6px; right: -6px; transform: rotate(180deg); }
+.ad-caption { font-size: 14px; color: var(--muted); text-align: center; max-width: 34ch; margin: 16px 0 0; }
+
+/* Proof */
+.proof { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding-top: 34px; padding-bottom: 34px; }
+.proof h2 { font-size: clamp(22px, 3.2vw, 30px); font-weight: 800; line-height: 1.15; margin: 0 0 16px; max-width: 30ch; }
+.names { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.names li { background: var(--frost); border-radius: 30px; padding: 7px 16px; font-weight: 600; font-size: 15px; }
+.names li.more { background: none; color: var(--muted); font-weight: 400; padding-left: 4px; }
+
+/* Packages */
+.order { background: var(--frost); padding: 56px 0; }
+h2.section { font-size: clamp(26px, 4vw, 38px); font-weight: 800; letter-spacing: -0.01em; line-height: 1.1; margin: 0 0 8px; }
+.order-intro { margin: 0 0 28px; color: var(--muted); max-width: 62ch; }
+.deadline { color: var(--red-deep); font-weight: 600; }
+.order-grid { display: grid; grid-template-columns: 1fr 320px; gap: 34px; align-items: start; }
+@media (max-width: 900px) { .order-grid { grid-template-columns: 1fr; } }
+
+.bundles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+@media (max-width: 680px) { .bundles { grid-template-columns: 1fr; gap: 12px; } .bundle { padding: 16px 16px 10px; } .bundle .bprice { font-size: 28px; } }
+.bundle { position: relative; background: var(--snow); border: 2px solid var(--line); border-radius: 16px; padding: 20px 18px 18px; cursor: pointer; display: flex; flex-direction: column; }
+.bundle input[type=radio] { position: absolute; opacity: 0; pointer-events: none; }
+.bundle.on { border-color: var(--red); box-shadow: inset 0 0 0 1px var(--red); }
+.bundle:focus-within { outline: 3px solid var(--red); outline-offset: 3px; }
+.bundle.popular { border-color: var(--pine); }
+.bundle.popular.on { border-color: var(--red); }
+.bundle h3 { margin: 0; font-size: 20px; }
+.bundle .bprice { font-size: 32px; font-weight: 800; line-height: 1.1; margin: 8px 0 2px; }
+.bundle .per { font-size: 14px; color: var(--muted); margin: 0 0 12px; }
+.bundle ul { list-style: none; margin: 0 0 12px; padding: 0; font-size: 15px; }
+.bundle li { padding: 5px 0 5px 22px; position: relative; border-top: 1px solid var(--line); }
+.bundle li::before { content: ""; position: absolute; left: 2px; top: 12px; width: 10px; height: 6px; border-left: 2px solid var(--green); border-bottom: 2px solid var(--green); transform: rotate(-45deg); }
+.bundle li.save { color: var(--green); font-weight: 600; }
+.badge { position: absolute; top: -11px; left: 16px; background: var(--pine); color: var(--snow); font-size: 13px; font-weight: 600; padding: 3px 11px; border-radius: 20px; }
+.station-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; margin: 0 0 22px; font-weight: 800; }
+.order-grid > * { min-width: 0; }
+.station-row select { flex: 1 1 240px; min-width: 0; max-width: 100%; font: inherit; font-weight: 400; font-size: 16px; padding: 11px 12px; border-radius: 10px; border: 2px solid var(--pine); background: var(--snow); color: var(--ink); }
+.addon { margin-top: 18px; background: var(--snow); border: 2px dashed var(--line); border-radius: 16px; padding: 16px 18px; }
+.addon.on { border: 2px solid var(--red); }
+.addon-head { display: flex; align-items: center; gap: 14px; cursor: pointer; }
+.addon-head input { position: absolute; opacity: 0; pointer-events: none; }
+.tick { flex: none; width: 26px; height: 26px; border-radius: 7px; border: 2px solid var(--pine); position: relative; background: var(--snow); }
+.addon-head input:checked + .tick { background: var(--red); border-color: var(--red); }
+.addon-head input:checked + .tick::after { content: ""; position: absolute; left: 7px; top: 3px; width: 7px; height: 12px; border-right: 3px solid #fff; border-bottom: 3px solid #fff; transform: rotate(45deg); }
+.addon-head input:focus-visible + .tick { outline: 3px solid var(--red); outline-offset: 3px; }
+.addon-text { flex: 1; min-width: 0; }
+.addon-text strong { display: block; font-size: 18px; }
+.addon-text small { display: block; color: var(--muted); font-size: 14px; }
+.addon-price { font-weight: 800; white-space: nowrap; }
+.addon-opts { margin-top: 14px; }
+@media (max-width: 520px) { .addon-head { flex-wrap: wrap; align-items: flex-start; } .addon-text { flex-basis: calc(100% - 40px); } .addon-price { padding-left: 40px; } }
+.addon:not(.on) .addon-opts { opacity: .7; }
+.custom-toggle { background: none; border: none; padding: 0; margin: 18px 0 0; font: inherit; font-size: 15px; color: var(--red-deep); text-decoration: underline; cursor: pointer; }
+
+.custom { display: none; margin-top: 26px; }
+.custom.open { display: block; }
+fieldset { border: none; margin: 0 0 26px; padding: 0; }
+legend { font-weight: 800; font-size: 18px; margin-bottom: 8px; padding: 0; }
+.choices { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
+.choice { position: relative; }
+.choice input { position: absolute; opacity: 0; inset: 0; pointer-events: none; }
+.choice label { display: block; height: 100%; cursor: pointer; background: var(--snow); border: 2px solid var(--line); border-radius: 12px; padding: 11px 14px; line-height: 1.3; }
+.choice label strong { display: block; font-size: 16px; overflow-wrap: anywhere; }
+.choice label small { display: block; color: var(--muted); font-size: 14px; margin-top: 2px; }
+.choice input:checked + label { border-color: var(--red); box-shadow: inset 0 0 0 1px var(--red); }
+.choice input:focus-visible + label { outline: 3px solid var(--red); outline-offset: 3px; }
+
+.summary { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); background: var(--snow); border-radius: 16px; padding: 22px; border: 2px solid var(--pine); }
+.summary h3 { margin: 0 0 12px; font-size: 18px; }
+.lines { list-style: none; margin: 0 0 14px; padding: 0; font-size: 15px; }
+.lines li { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.lines li span:last-child { white-space: nowrap; }
+.lines li.save { color: var(--green); font-weight: 600; }
+.total { display: flex; justify-content: space-between; align-items: baseline; font-weight: 800; font-size: 26px; margin: 4px 0; }
+.tax { font-size: 13px; color: var(--muted); margin: 0 0 16px; }
+.summary .btn { display: block; width: 100%; }
+.btn[aria-disabled="true"] { background: #b7c4bb; pointer-events: none; }
+.copied { font-size: 13px; color: var(--green); text-align: center; margin: 8px 0 0; min-height: 1.2em; }
+.fallback { font-size: 15px; text-align: center; margin: 4px 0 0; color: var(--muted); }
+.fallback a { font-weight: 600; }
+.approve { font-size: 14px; margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--line); }
+
+/* Included + FAQ */
+.included { padding-top: 56px; padding-bottom: 20px; }
+.inc-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 34px; margin-top: 22px; }
+@media (max-width: 760px) { .inc-grid { grid-template-columns: 1fr; } }
+.inc-grid h3 { font-size: 19px; margin: 0 0 10px; }
+.inc-list { margin: 0; padding-left: 20px; }
+.inc-list li { margin-bottom: 8px; }
+.inc-list b { font-weight: 800; }
+.need { background: var(--frost); border-radius: 16px; padding: 20px 22px; }
+.need p { margin: 0 0 8px; }
+.need p:last-child { margin: 0; color: var(--muted); font-size: 15px; }
+
+.faq { padding-top: 40px; padding-bottom: 40px; }
+.faq details { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; font-weight: 800; font-size: 18px; padding: 16px 30px 16px 0; list-style: none; position: relative; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after { content: "+"; position: absolute; right: 4px; top: 12px; font-size: 24px; font-weight: 400; color: var(--red); }
+.faq details[open] summary::after { content: "\2212"; }
+.faq details p { margin: 0 0 18px; max-width: 64ch; }
+
+.rep { margin-bottom: 48px; padding: 26px; border-radius: 16px; background: var(--pine); color: var(--snow); display: flex; flex-wrap: wrap; gap: 18px 30px; align-items: center; justify-content: space-between; }
+.rep p { margin: 0; }
+.rep a { color: var(--snow); font-weight: 600; }
+.rep .name { font-weight: 800; font-size: 20px; }
+.rep .btn { background: var(--snow); color: var(--red-deep); }
+.rep .btn:hover { background: var(--frost); }
+
+/* ---- Centred layout ---- */
+.hero { text-align: center; padding-top: 36px; padding-bottom: 56px; }
+.eyebrow { margin: 0 auto 16px; max-width: 72ch; }
+.eyebrow, h1, .subhead, .lede, .proof h2, .order-intro, .ad-caption { text-wrap: balance; }
+h1 { margin-left: auto; margin-right: auto; }
+.subhead { margin: 0 auto 18px; }
+.lede { margin: 0 auto 26px; }
+.hero-cta { justify-content: center; flex-direction: column; gap: 10px; margin: 0 0 40px; }
+.spec { align-items: center; text-align: left; max-width: 920px; margin: 0 auto; }
+.ad-caption { margin-left: auto; margin-right: auto; }
+
+.proof { text-align: center; }
+.proof h2 { margin: 0 auto 18px; }
+.names { justify-content: center; }
+
+h2.section { text-align: center; }
+.order-intro { text-align: center; margin: 0 auto 30px; }
+.station-row { justify-content: center; }
+.bundle { text-align: center; align-items: center; }
+.bundle ul { width: 100%; }
+.bundle li { padding: 6px 0; }
+.bundle li::before { display: none; }
+.custom-toggle { display: block; margin: 20px auto 0; }
+.bundle .badge { left: 50%; transform: translateX(-50%); white-space: nowrap; }
+.bundle ul { margin-bottom: 0; }
+.onair { text-align: center; }
+.onair .player { justify-content: center; text-align: left; max-width: 420px; margin: 0 auto; }
+
+.included h2.section { margin-bottom: 0; }
+.inc-grid { max-width: 920px; margin: 26px auto 0; }
+
+.faq > h2.section { margin-bottom: 14px; }
+.faq details { max-width: 760px; margin: 0 auto; }
+.faq details p { margin-left: auto; margin-right: auto; }
+
+.rep { max-width: 920px; margin-left: auto; margin-right: auto; justify-content: center; text-align: center; flex-direction: column; }
+</style>
+</head>
+<body>
+<div class="stripe" aria-hidden="true"></div>
+<header class="wrap stations" id="stations"></header>
+
+<main>
+  <section class="wrap hero">
+    <p class="eyebrow" id="eyebrow"></p>
+    <h1 id="headline"></h1>
+    <p class="subhead" id="subhead"></p>
+    <p class="lede" id="lede"></p>
+    <div class="hero-cta">
+      <a class="btn" href="#packages" id="hero-btn"></a>
+      <span class="or-call" id="hero-call"></span>
+    </div>
+
+    <div class="spec">
+      <div class="onair" id="onair">
+        <h2>Your radio greeting</h2>
+        <div class="player">
+          <button class="play" id="play" aria-label="Play your greeting">
+            <svg id="icon-play" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>
+            <svg id="icon-pause" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 4h4v16H6zM14 4h4v16h-4z"/></svg>
+          </button>
+          <div class="track">
+            <p class="track-name" id="track-name"></p>
+            <div class="bar" id="bar" role="slider" aria-label="Playback position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><i id="fill"></i></div>
+            <div class="time" id="time">0:00 / 0:15</div>
+          </div>
+        </div>
+        <p class="no-audio">Your recorded greeting is on its way. Here's the script we wrote for you.</p>
+        <p class="reach" id="reach"></p>
+        <div class="script">
+          <p class="script-note">The script. You approve every word before it airs.</p>
+          <p id="script" style="margin:0"></p>
+        </div>
+        <audio id="audio" preload="metadata"></audio>
+      </div>
+
+      <div class="digital-col">
+        <div class="ad" id="ad" role="img">
+          <div class="ad-inner">
+            <svg class="holly tl" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 20 C10 4 2 10 4 2 C12 6 18 6 20 20Z" fill="#2f6b30"/><path d="M20 20 C36 10 30 2 38 4 C34 12 34 18 20 20Z" fill="#3f8a3a"/><circle cx="20" cy="20" r="4" fill="#c8102e"/><circle cx="25" cy="24" r="3.4" fill="#c8102e"/></svg>
+            <p class="ad-head" id="ad-head"></p>
+            <div id="ad-mark"></div>
+            <svg class="holly br" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 20 C10 4 2 10 4 2 C12 6 18 6 20 20Z" fill="#2f6b30"/><path d="M20 20 C36 10 30 2 38 4 C34 12 34 18 20 20Z" fill="#3f8a3a"/><circle cx="20" cy="20" r="4" fill="#c8102e"/><circle cx="25" cy="24" r="3.4" fill="#c8102e"/></svg>
+          </div>
+        </div>
+        <p class="ad-caption" id="ad-caption"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap proof">
+    <h2 id="proof-head"></h2>
+    <ul class="names" id="names"></ul>
+  </section>
+
+  <section class="order" id="packages">
+    <div class="wrap">
+      <h2 class="section">Choose how often it airs</h2>
+      <p class="order-intro" id="order-intro"></p>
+      <div class="order-grid">
+        <div>
+          <div id="simple">
+            <label class="station-row" for="simple-station"><span>Your station</span>
+              <select id="simple-station"></select>
+            </label>
+            <div class="bundles" id="bundles" role="radiogroup" aria-label="Radio packages"></div>
+            <div class="addon" id="addon">
+              <label class="addon-head" for="dig-on">
+                <input type="checkbox" id="dig-on">
+                <span class="tick" aria-hidden="true"></span>
+                <span class="addon-text"><strong>Add your web greeting</strong><small id="addon-sub"></small></span>
+                <span class="addon-price" id="addon-head-price"></span>
+              </label>
+              <div class="choices addon-opts" id="addon-opts"></div>
+            </div>
+          </div>
+          <button class="custom-toggle" id="custom-toggle" aria-expanded="false">Customize: pick 2 stations or more websites</button>
+
+          <div class="custom" id="custom">
+            <fieldset><legend>How many days</legend><div class="choices" id="radio-pkgs"></div></fieldset>
+            <fieldset><legend>Which stations</legend><div class="choices" id="station-picks"></div></fieldset>
+            <fieldset><legend>Web greeting</legend><div class="choices" id="digital-pkgs"></div></fieldset>
+            <fieldset id="sites-set"><legend>Which websites</legend><div class="choices" id="site-picks"></div></fieldset>
+          </div>
+        </div>
+
+        <aside class="summary" aria-live="polite">
+          <h3>Your greeting</h3>
+          <ul class="lines" id="lines"></ul>
+          <div class="total"><span>Total</span><span id="total">$0</span></div>
+          <p class="tax">Plus applicable taxes.</p>
+          <a class="btn" id="cta" href="#">Reserve my greeting</a>
+          <p class="copied" id="copied"></p>
+          <p class="fallback" id="fallback"></p>
+          <p class="approve" id="approve">Nothing airs until you approve your script.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap included">
+    <h2 class="section">What's included</h2>
+    <div class="inc-grid">
+      <div>
+        <ul class="inc-list">
+          <li><b>A custom script</b>, written for your business. You've already heard it above.</li>
+          <li><b>Professional voice and production</b>, ready to air.</li>
+          <li><b>Changes until you're happy.</b> Tell me what to adjust and nothing airs until you approve.</li>
+          <li><b>Your web greeting</b>, designed with your logo, when you add it to your package.</li>
+          <li id="inc-air"></li>
+        </ul>
+      </div>
+      <div class="need">
+        <h3>What we need from you</h3>
+        <p>A yes, and a final OK on your script.</p>
+        <p id="need-bill"></p>
+        <p>We already have your logo and your greeting is recorded.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap faq" id="faq">
+    <h2 class="section">Questions owners ask</h2>
+  </section>
+
+  <section class="wrap"><div class="rep" id="rep"></div></section>
+</main>
+
+<div class="stripe" aria-hidden="true"></div>
+
+<script id="page-data" type="application/json">{"business_name": "Miranda Dawe, Realtor", "location": "", "contact_first_name": "Miranda", "script": "Miranda Dawe, Realtor thinks there is no more fitting time than the holiday season to say “thank you for your business.” Miranda Dawe, Realtor hopes you will enjoy the special gifts of the season: the gift of love, the gift of peace, and the gift of happiness. The season’s best to you from Miranda Dawe, Realtor.", "digital_headline": "Merry Christmas from", "logo": null, "audio": null, "daily_logo": null, "rep": {"name": "Tommy West", "email": "tommyww@mbcmedia.ca", "phone": "905-372-5401 x 2545"}, "offer_note": "", "default_station": "my", "program": {"year": 2026, "offer_note": "Pre-sale pricing ends Thursday, October 15.", "radio": {"air_dates": "November 30 to December 20", "air_hours": "6 AM to 11 PM", "fine_print": ["All messages are 15 seconds and include business name and address only.", "All messages air between 6 AM and 11 PM.", "Every script is approved by you before it airs."], "packages": [{"id": "3day", "label": "3 days", "detail": "4 messages a day for 3 days", "price": 289, "best_value": false, "days": 3}, {"id": "5day", "label": "5 days", "detail": "4 messages a day for 5 days", "price": 379, "best_value": false, "days": 5}, {"id": "8day", "label": "8 days", "detail": "4 messages a day for 8 days", "price": 469, "best_value": true, "days": 8}], "stations": [{"id": "cr", "name": "Classic Rock 107.9", "logo_file": "assets/classic-rock.png", "short_name": "Classic Rock 107.9", "logo": null}, {"id": "myfm", "name": "93.3 myFM", "logo_file": "assets/myfm.png", "short_name": "93.3 myFM", "logo": null}, {"id": "wow", "name": "100.9 WOW-FM Brighton", "logo_file": "assets/wow-fm.png", "short_name": "100.9 WOW FM", "logo": null}], "all_stations_note": "Choose all 3 stations and the third is half price.", "third_station_discount": 0.5}, "digital": {"serve_dates": "November 30 to December 25", "fine_print": ["Digital greetings appear in the big box rotator on the right rail of NorthumberlandDAILY.ca.", "Digital greetings contain your business logo only."], "packages": [{"id": "5k", "label": "Shown 5,000 times", "impressions": 5000, "price": 90, "best_value": false}, {"id": "10k", "label": "Shown 10,000 times", "impressions": 10000, "price": 140, "best_value": true}], "websites": ["NorthumberlandDAILY.ca", "classicrock1079.ca", "brightontoday.ca"]}, "default_script": "{CLIENT} thinks there is no more fitting time than the holiday season to say “thank you for your business.” {CLIENT} hopes you will enjoy the special gifts of the season: the gift of love, the gift of peace, and the gift of happiness. The season’s best to you from {CLIENT}, {LOCATION}.", "digital_headlines": ["Happy Holidays from", "Seasons Greetings from", "Merry Christmas from", "Warmest Wishes from", "Peace On Earth from"], "default_rep": {"name": "Your Name", "email": "you@yourstation.ca", "phone": "905-000-0000"}, "deadline": "2026-10-15", "proof": {"participants": "100+", "names": ["Ryan Huffman Real Estate Team", "Cheslers Shoes", "Yona’s Greenhouse", "Colour Concepts Port Hope", "Stadtke Plumbing and Heating"], "radio_reach": "Heard by thousands of local listeners every week.", "web_reach": "Seen by thousands of local readers."}, "billing": {"short": "Nothing to pay until November 30.", "detail": "Reserve now and you're invoiced November 1, net 30, so nothing is due until November 30."}, "region": "Northumberland"}}</script>
+<script>
+(function () {
+  var D = JSON.parse(document.getElementById("page-data").textContent);
+  var P = D.program, PR = P.proof || {};
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var money = function (n) { return "$" + n.toLocaleString("en-CA", { minimumFractionDigits: n % 1 ? 2 : 0, maximumFractionDigits: 2 }); };
+  var el = function (tag, attrs, html) { var e = document.createElement(tag); for (var k in attrs || {}) e.setAttribute(k, attrs[k]); if (html != null) e.innerHTML = html; return e; };
+  var byId = function (list, id) { return list.filter(function (x) { return x.id === id; })[0]; };
+  var first = D.rep.name.split(" ")[0];
+  var tel = D.rep.phone.replace(/[^\d+]/g, "");
+  var bill = P.billing || {};
+  var minPrice = Math.min.apply(null, P.radio.packages.map(function (p) { return p.price; }));
+
+  /* Deadline */
+  var dl = "";
+  if (P.deadline) {
+    var end = new Date(P.deadline + "T23:59:59");
+    var days = Math.ceil((end - new Date()) / 86400000);
+    if (days > 1) dl = P.offer_note + " " + days + " days left.";
+    else if (days === 1) dl = "Pre-sale pricing ends today.";
+    else dl = "Pre-sale pricing has ended. Call me for current rates.";
+  }
+
+  /* Station logos (header shows only when logos are supplied) */
+  P.radio.stations.forEach(function (s) { if (s.logo) $("stations").appendChild(el("img", { src: s.logo, alt: s.name })); });
+  if (D.daily_logo) $("stations").appendChild(el("img", { src: D.daily_logo, alt: "NorthumberlandDAILY.ca" }));
+
+  /* Hero */
+  $("headline").textContent = "Thank " + (P.region || "your community") + " for a great year" + (D.contact_first_name ? ", " + D.contact_first_name : "") + ".";
+  var bn = D.business_name;
+  $("subhead").textContent = bn.indexOf(",") > -1 ? "The Christmas greeting for " + bn + " is ready to air."
+    : bn + (/s$/i.test(bn) ? "\u2019" : "\u2019s") + " Christmas greeting is ready to air.";
+  var sn = P.radio.stations.map(function (s) { return s.short_name || s.name; });
+  $("eyebrow").textContent = "Christmas Greetings " + P.year + " on " + (sn.length > 1 ? sn.slice(0, -1).join(", ") + (sn.length > 2 ? "," : "") + " and " + sn[sn.length - 1] : sn[0]) + ".";
+  var start = P.radio.air_dates.split(" to ")[0];
+  $("lede").textContent = "Thank your customers this Christmas in front of thousands of local listeners. We\u2019ve already written and recorded your greeting. Press play, and if you like it, it airs " + start + ". From " + money(minPrice) + (bill.short ? ", with " + bill.short.charAt(0).toLowerCase() + bill.short.slice(1) : ".");
+  $("hero-btn").textContent = "Choose my package";
+  $("hero-call").innerHTML = "or call or text " + esc(first) + " at <a href='tel:" + esc(tel) + "'>" + esc(D.rep.phone) + "</a>";
+  $("track-name").textContent = D.business_name;
+  $("script").textContent = D.script;
+  var home = P.radio.stations[Math.max(0, P.radio.stations.findIndex(function (s) { return s.id === D.default_station; }))];
+  if (PR.radio_reach) $("reach").innerHTML = "<strong>" + esc(PR.radio_reach) + "</strong>";
+
+  /* Audio */
+  var audio = $("audio");
+  if (D.audio) {
+    audio.src = D.audio;
+    var fmt = function (t) { t = Math.max(0, Math.round(t || 0)); return Math.floor(t / 60) + ":" + String(t % 60).padStart(2, "0"); };
+    var sync = function () {
+      var pct = audio.duration ? (audio.currentTime / audio.duration) * 100 : 0;
+      $("fill").style.width = pct + "%"; $("bar").setAttribute("aria-valuenow", Math.round(pct));
+      $("time").textContent = fmt(audio.currentTime) + " / " + fmt(audio.duration || 15);
+    };
+    var setIcon = function (on) {
+      $("icon-play").style.display = on ? "none" : ""; $("icon-pause").style.display = on ? "" : "none";
+      $("play").setAttribute("aria-label", on ? "Pause your greeting" : "Play your greeting");
+    };
+    $("play").addEventListener("click", function () { audio.paused ? audio.play() : audio.pause(); });
+    audio.addEventListener("play", function () { setIcon(true); });
+    audio.addEventListener("pause", function () { setIcon(false); });
+    audio.addEventListener("ended", function () { setIcon(false); audio.currentTime = 0; sync(); });
+    audio.addEventListener("timeupdate", sync); audio.addEventListener("loadedmetadata", sync);
+    var seek = function (f) { if (audio.duration) { audio.currentTime = f * audio.duration; sync(); } };
+    $("bar").addEventListener("click", function (e) { var r = this.getBoundingClientRect(); seek((e.clientX - r.left) / r.width); });
+    $("bar").addEventListener("keydown", function (e) {
+      if (!audio.duration) return;
+      if (e.key === "ArrowRight") { audio.currentTime = Math.min(audio.duration, audio.currentTime + 1); sync(); }
+      if (e.key === "ArrowLeft") { audio.currentTime = Math.max(0, audio.currentTime - 1); sync(); }
+    });
+  } else { $("onair").classList.add("missing"); }
+
+  /* Digital greeting */
+  $("ad-head").textContent = D.digital_headline;
+  $("ad").setAttribute("aria-label", D.digital_headline + " " + D.business_name);
+  $("ad-mark").appendChild(D.logo ? el("img", { class: "ad-logo", src: D.logo, alt: D.business_name + " logo" }) : el("div", { class: "ad-name" }, esc(D.business_name)));
+  $("ad-caption").textContent = "Your web greeting at actual size on " + P.digital.websites[0] + "." + (PR.web_reach ? " " + PR.web_reach : "");
+
+  /* Proof */
+  if (PR.participants) {
+    $("proof-head").textContent = "Join " + PR.participants + " local businesses who send a Christmas greeting with us";
+    var others = (PR.names || []).filter(function (n) { return n.toLowerCase() !== D.business_name.toLowerCase(); });
+    others.forEach(function (n) { $("names").appendChild(el("li", {}, esc(n))); });
+    if (others.length) $("names").appendChild(el("li", { class: "more" }, "and many more"));
+  } else { document.querySelector(".proof").style.display = "none"; }
+
+  /* Pricing engine */
+  function price(sel) {
+    var lines = [], total = 0, radio = 0;
+    sel.stations.forEach(function (s) { lines.push([s.name + ", " + sel.pkg.days + " days", money(sel.pkg.price)]); radio += sel.pkg.price; });
+    var save = 0;
+    if (sel.stations.length === P.radio.stations.length) { save = sel.pkg.price * P.radio.third_station_discount; radio -= save; lines.push(["All 3 stations saving", "\u2212" + money(save), "save"]); }
+    total = radio;
+    if (sel.digital) { lines.push(["Web greeting, " + sel.digital.label.toLowerCase(), money(sel.digital.price)]); total += sel.digital.price; }
+    var airings = 4 * sel.pkg.days * sel.stations.length;
+    return { lines: lines, total: total, radio: radio, save: save, airings: airings };
+  }
+
+  var stationIdx = Math.max(0, P.radio.stations.findIndex(function (s) { return s.id === D.default_station; }));
+  var bestPkg = P.radio.packages.filter(function (p) { return p.best_value; })[0] || P.radio.packages[P.radio.packages.length - 1];
+  var state = { mode: "simple", simplePkg: bestPkg, simpleStation: P.radio.stations[stationIdx].id, digOn: false, digPkg: P.digital.packages[0],
+    pkg: bestPkg, stations: {}, digital: null, sites: {} };
+  state.stations[P.radio.stations[stationIdx].id] = true;
+  state.sites[P.digital.websites[0]] = true;
+
+  function simpleStations() { return state.simpleStation === "all" ? P.radio.stations.slice() : [byId(P.radio.stations, state.simpleStation)]; }
+  function simpleSel() {
+    return { pkg: state.simplePkg, stations: simpleStations(), digital: state.digOn ? state.digPkg : null, sites: state.digOn ? [P.digital.websites[0]] : [] };
+  }
+  function customSel() {
+    return { pkg: state.pkg, stations: P.radio.stations.filter(function (s) { return state.stations[s.id]; }), digital: state.digital,
+      sites: P.digital.websites.filter(function (w) { return state.sites[w]; }) };
+  }
+
+  /* Simple mode: station, 3 radio packages, digital add-on */
+  var ss = $("simple-station");
+  P.radio.stations.forEach(function (st) {
+    var o = el("option", { value: st.id }, esc(st.name));
+    if (st.id === state.simpleStation) o.selected = true; ss.appendChild(o);
+  });
+  ss.appendChild(el("option", { value: "all" }, "All 3 stations (third station half price)"));
+  ss.addEventListener("change", function () { state.simpleStation = ss.value; render(); });
+
+  P.radio.packages.forEach(function (p) {
+    var card = el("label", { class: "bundle", "data-id": p.id });
+    card.innerHTML = "<input type='radio' name='bundle' value='" + p.id + "'>" + (p.best_value ? "<span class='badge'>Best value</span>" : "") +
+      "<h3>" + p.days + " days</h3><p class='bprice'></p><p class='per'></p><ul><li>4 airings a day</li><li class='airings'></li><li class='save' hidden></li></ul>";
+    var input = card.querySelector("input");
+    if (p === state.simplePkg) input.checked = true;
+    input.addEventListener("change", function () { state.simplePkg = p; render(); });
+    $("bundles").appendChild(card);
+  });
+
+  $("addon-sub").textContent = "Your logo on " + P.digital.websites[0] + ", November 30 to December 25." + (PR.web_reach ? " " + PR.web_reach : "");
+  P.digital.packages.forEach(function (p) {
+    var id = "dig-" + p.id, wrap = el("div", { class: "choice" });
+    var input = el("input", { type: "radio", name: "dig-level", id: id, value: p.id });
+    if (p === state.digPkg) input.checked = true;
+    wrap.appendChild(input);
+    wrap.appendChild(el("label", { for: id }, "<strong>" + esc(p.label) + "</strong><small>" + money(p.price) + (p.best_value ? ", best value" : "") + "</small>"));
+    input.addEventListener("change", function () { state.digPkg = p; state.digOn = true; $("dig-on").checked = true; render(); });
+    $("addon-opts").appendChild(wrap);
+  });
+  $("dig-on").addEventListener("change", function (e) { state.digOn = e.target.checked; render(); });
+  $("addon-head-price").textContent = "From " + money(P.digital.packages[0].price);
+
+  /* Custom builder */
+  var choice = function (type, name, value, inner, checked) {
+    var id = name + "-" + value.replace(/\W/g, ""), wrap = el("div", { class: "choice" }), input = el("input", { type: type, name: name, id: id, value: value });
+    if (checked) input.checked = true;
+    wrap.appendChild(input); wrap.appendChild(el("label", { for: id }, inner)); return wrap;
+  };
+  P.radio.packages.forEach(function (p) {
+    var c = choice("radio", "pkg", p.id, "<strong>" + p.days + " days</strong><small>" + money(p.price) + " per station</small>", p === state.pkg);
+    c.querySelector("input").addEventListener("change", function () { state.pkg = p; render(); });
+    $("radio-pkgs").appendChild(c);
+  });
+  P.radio.stations.forEach(function (s) {
+    var c = choice("checkbox", "station", s.id, "<strong>" + esc(s.name) + "</strong>", !!state.stations[s.id]);
+    c.querySelector("input").addEventListener("change", function (e) { state.stations[s.id] = e.target.checked; render(); });
+    $("station-picks").appendChild(c);
+  });
+  var none = choice("radio", "digital", "none", "<strong>Radio only</strong>", true);
+  none.querySelector("input").addEventListener("change", function () { state.digital = null; render(); });
+  $("digital-pkgs").appendChild(none);
+  P.digital.packages.forEach(function (p) {
+    var c = choice("radio", "digital", p.id, "<strong>" + esc(p.label) + "</strong><small>" + money(p.price) + "</small>", false);
+    c.querySelector("input").addEventListener("change", function () { state.digital = p; render(); });
+    $("digital-pkgs").appendChild(c);
+  });
+  P.digital.websites.forEach(function (w, i) {
+    var c = choice("checkbox", "site", w, "<strong>" + esc(w) + "</strong>", i === 0);
+    c.querySelector("input").addEventListener("change", function (e) { state.sites[w] = e.target.checked; render(); });
+    $("site-picks").appendChild(c);
+  });
+
+  $("custom-toggle").addEventListener("click", function () {
+    var open = state.mode === "simple";
+    state.mode = open ? "custom" : "simple";
+    $("custom").classList.toggle("open", open);
+    $("simple").style.display = open ? "none" : "";
+    this.setAttribute("aria-expanded", open ? "true" : "false");
+    this.textContent = open ? "Back to the simple options" : "Customize: pick 2 stations or more websites";
+    render();
+  });
+
+  var orderText = "";
+  function render() {
+    /* Update package cards for the chosen station(s) */
+    document.querySelectorAll(".bundle").forEach(function (c) {
+      var p = byId(P.radio.packages, c.getAttribute("data-id"));
+      var q = price({ pkg: p, stations: simpleStations(), digital: null, sites: [] });
+      c.classList.toggle("on", p === state.simplePkg);
+      c.querySelector(".bprice").textContent = money(q.radio);
+      c.querySelector(".per").textContent = money(Math.round(q.radio / q.airings * 100) / 100) + " per airing";
+      c.querySelector(".airings").textContent = q.airings + " airings total";
+      var sv = c.querySelector(".save");
+      sv.hidden = !q.save; sv.textContent = q.save ? "You save " + money(q.save) : "";
+    });
+    $("addon").classList.toggle("on", state.digOn);
+
+    var sel = state.mode === "simple" ? simpleSel() : customSel();
+    $("sites-set").style.display = state.digital ? "" : "none";
+    var q = sel.stations.length ? price(sel) : { lines: [], total: 0 };
+
+    $("lines").innerHTML = "";
+    if (!sel.stations.length) $("lines").appendChild(el("li", {}, "<span>Choose at least one station.</span>"));
+    q.lines.forEach(function (l) { $("lines").appendChild(el("li", l[2] ? { class: l[2] } : {}, "<span>" + esc(l[0]) + "</span><span>" + l[1] + "</span>")); });
+    $("total").textContent = money(q.total);
+
+    var ok = sel.stations.length > 0 && (!sel.digital || sel.sites.length > 0);
+    $("cta").setAttribute("aria-disabled", ok ? "false" : "true");
+
+    orderText = [
+      "Hi " + first + ",", "",
+      "Please reserve this Christmas Greeting for " + D.business_name + ":", "",
+      "Radio: 4 airings a day for " + sel.pkg.days + " days",
+      "Stations: " + sel.stations.map(function (s) { return s.name; }).join(", "),
+      "Web greeting: " + (sel.digital ? sel.digital.label + " on " + sel.sites.join(", ") : "None"),
+      "Total before tax: " + money(q.total), "",
+      "Thanks,", D.contact_first_name || ""
+    ].join("\n");
+    $("cta").href = "mailto:" + D.rep.email + "?subject=" + encodeURIComponent("Christmas Greeting: " + D.business_name) + "&body=" + encodeURIComponent(orderText);
+  }
+  render();
+
+  $("cta").addEventListener("click", function () {
+    try {
+      if (navigator.clipboard) navigator.clipboard.writeText(orderText).then(function () {
+        $("copied").textContent = "Your order is also copied, in case your email doesn't open.";
+      }).catch(function () {});
+    } catch (e) {}
+  });
+  $("fallback").innerHTML = "or call or text " + esc(first) + " at <a href='tel:" + esc(tel) + "'>" + esc(D.rep.phone) + "</a>";
+
+  if (bill.short) $("approve").innerHTML = "<strong>" + esc(bill.short) + "</strong> Invoiced November 1, net 30.<br>Nothing airs until you approve your script.";
+  if (bill.detail) $("need-bill").textContent = bill.detail;
+  $("order-intro").innerHTML = "Radio greetings air " + esc(P.radio.air_dates) + ", 4 times a day between " + esc(P.radio.air_hours.replace(" to ", " and ")) + ". " + (dl ? "<span class='deadline'>" + esc(dl) + "</span>" : "");
+  $("inc-air").innerHTML = "<b>On air " + esc(P.radio.air_dates) + "</b>, 4 times a day, " + esc(P.radio.air_hours) + ". Web greetings run " + esc(P.digital.serve_dates) + ".";
+
+  /* FAQ */
+  var faqs = [
+    ["Will anyone actually hear it?", "Yes. Our three stations are local radio, heard every week by thousands of people who live, work, and shop in Northumberland. Your greeting airs 4 times a day between " + P.radio.air_hours.replace(" to ", " and ") + ", while they’re driving, working, and running errands."],
+    ["Will this bring in sales?", "It isn't a sales ad, and we won't pretend it is. It's a thank-you your customers hear in their car and kitchen, from a business they know. That's why " + (PR.participants || "so many") + " local businesses send one."],
+    ["What if I don't love the script?", "Tell " + first + " what to change and we'll revise it. Nothing airs until you approve it."],
+    ["Why book in October?", dl ? "Booking now locks in pre-sale pricing, which ends " + P.offer_note.replace("Pre-sale pricing ends ", "") + " There's nothing else for you to do before it airs." : "Booking early means there's nothing left for you to do in December."],
+    ["When do I pay?", bill.detail || "Your rep will confirm billing when you reserve."],
+    ["What do I need to do?", "Choose a package and approve your script. We already have your logo, and your greeting is recorded."],
+    ["Can I share this with my business partner?", "Yes. Forward this page; it works on any phone or computer."]
+  ];
+  faqs.forEach(function (f) { var d = el("details"); d.appendChild(el("summary", {}, esc(f[0]))); d.appendChild(el("p", {}, esc(f[1]))); $("faq").appendChild(d); });
+
+  /* Rep */
+  $("rep").innerHTML =
+    "<div><p>Questions or changes to your script?</p><p class='name'>" + esc(D.rep.name) + "</p>" +
+    "<p><a href='tel:" + esc(tel) + "'>" + esc(D.rep.phone) + "</a> &nbsp; <a href='mailto:" + esc(D.rep.email) + "'>" + esc(D.rep.email) + "</a></p></div>" +
+    "<a class='btn' href='#packages'>Choose my package</a>";
+})();
+</script>
+</body>
+</html>
