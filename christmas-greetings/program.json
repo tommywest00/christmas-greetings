@@ -1,0 +1,120 @@
+{
+  "year": 2026,
+  "offer_note": "Pre-sale pricing ends Thursday, October 15.",
+  "radio": {
+    "air_dates": "November 30 to December 20",
+    "air_hours": "6 AM to 11 PM",
+    "fine_print": [
+      "All messages are 15 seconds and include business name and address only.",
+      "All messages air between 6 AM and 11 PM.",
+      "Every script is approved by you before it airs."
+    ],
+    "packages": [
+      {
+        "id": "3day",
+        "label": "3 days",
+        "detail": "4 messages a day for 3 days",
+        "price": 289,
+        "best_value": false,
+        "days": 3
+      },
+      {
+        "id": "5day",
+        "label": "5 days",
+        "detail": "4 messages a day for 5 days",
+        "price": 379,
+        "best_value": false,
+        "days": 5
+      },
+      {
+        "id": "8day",
+        "label": "8 days",
+        "detail": "4 messages a day for 8 days",
+        "price": 469,
+        "best_value": true,
+        "days": 8
+      }
+    ],
+    "stations": [
+      {
+        "id": "cr",
+        "name": "Classic Rock 107.9",
+        "logo_file": "assets/classic-rock.png",
+        "short_name": "Classic Rock 107.9"
+      },
+      {
+        "id": "myfm",
+        "name": "93.3 myFM",
+        "logo_file": "assets/myfm.png",
+        "short_name": "93.3 myFM"
+      },
+      {
+        "id": "wow",
+        "name": "100.9 WOW-FM Brighton",
+        "logo_file": "assets/wow-fm.png",
+        "short_name": "100.9 WOW FM"
+      }
+    ],
+    "all_stations_note": "Choose all 3 stations and the third is half price.",
+    "third_station_discount": 0.5
+  },
+  "digital": {
+    "serve_dates": "November 30 to December 25",
+    "fine_print": [
+      "Digital greetings appear in the big box rotator on the right rail of NorthumberlandDAILY.ca.",
+      "Digital greetings contain your business logo only."
+    ],
+    "packages": [
+      {
+        "id": "5k",
+        "label": "Shown 5,000 times",
+        "impressions": 5000,
+        "price": 90,
+        "best_value": false
+      },
+      {
+        "id": "10k",
+        "label": "Shown 10,000 times",
+        "impressions": 10000,
+        "price": 140,
+        "best_value": true
+      }
+    ],
+    "websites": [
+      "NorthumberlandDAILY.ca",
+      "classicrock1079.ca",
+      "brightontoday.ca"
+    ]
+  },
+  "default_script": "{CLIENT} thinks there is no more fitting time than the holiday season to say “thank you for your business.” {CLIENT} hopes you will enjoy the special gifts of the season: the gift of love, the gift of peace, and the gift of happiness. The season’s best to you from {CLIENT}, {LOCATION}.",
+  "digital_headlines": [
+    "Happy Holidays from",
+    "Seasons Greetings from",
+    "Merry Christmas from",
+    "Warmest Wishes from",
+    "Peace On Earth from"
+  ],
+  "default_rep": {
+    "name": "Your Name",
+    "email": "you@yourstation.ca",
+    "phone": "905-000-0000"
+  },
+  "deadline": "2026-10-15",
+  "proof": {
+    "participants": "100+",
+    "names": [
+      "Ryan Huffman Real Estate Team",
+      "Cheslers Shoes",
+      "Yona’s Greenhouse",
+      "Colour Concepts Port Hope",
+      "Stadtke Plumbing and Heating"
+    ],
+    "radio_reach": "Heard by thousands of local listeners every week.",
+    "web_reach": "Seen by thousands of local readers."
+  },
+  "billing": {
+    "short": "Nothing to pay until November 30.",
+    "detail": "Reserve now and you're invoiced November 1, net 30, so nothing is due until November 30."
+  },
+  "region": "Northumberland"
+}
